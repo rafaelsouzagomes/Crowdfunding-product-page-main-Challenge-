@@ -458,53 +458,142 @@ header::after{
   width: 100px;
 }
 
+#menu-desktop{
+  display: none;
+}
+
+.buttonBookmark span {
+  display: none;
+}
 @media only screen and (min-width: 768px) {
 
   header{
-    background-size:contain;
+    background-size:100%;
+    background-image: url('images/image-hero-desktop.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 60%;
+    background-position-x: 40%;
+    background-position-y: -20%;
+    display: flex;
+    justify-content: center;
+  }
+  body{
+    background: blue;
+  }
+  main {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav{
+    justify-content: space-around;
+    margin-left: -10rem;
+    margin-top: 3.5rem;
+    width: 100rem;
+    height: 10rem;
+  }
+
+  nav h1{
+    font-size: 2.5rem;
+  }
+
+  #menuIcon {
+    display: none;
+  }
+
+  #menu-desktop{
+    display: block;
+  }
+
+  #menu-desktop ul{
+    display:flex;
+    background: none;
+    border: none;
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  #menu-desktop ul li {
+    border: none;
+    color: #fff;
+  }
     
+  #menu-desktop ul li span {
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: inline;
+    margin-left: 0;
+    cursor: pointer;
   }
 
-  
- nav{
-   justify-content: flex-start;
-   width: 50vw;
-   margin-left: 10rem;
- }
-
- #menuIcon {
-   display: none;
- }
-
- #menu-mobile{
-   display: block;
-   top: -5rem;
-   left: 70rem;
-   background: none;
- }
-
- #menu-mobile ul{
-   background: none;
-   border: none;
-   width: 100px;
-   flex-direction: row;
-
-
- }
- #menu-mobile ul li {
-   border: none;
-   color: #fff;
+  .box-content{
+    top: -10rem;
+    width: 50rem;
+    font-size: 3rem;
   }
-  
-  #menu-mobile ul li span {
-   font-weight: 400;
-   display: inline;
-   margin-left: 0;
-   white-space: nowrap;
- }
+  .box-content h1{
+    font-size: 2rem;
+  }
+
+  .box-content h1 > div{
+    display: inline;
+  }
+
+  .buttonBookmark button {
+    z-index: 2;
+  }
+
+  .buttonBookmark div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left:-2rem;
+    font-size: 1rem;
+    background: rgba(222,248,249);
+    border-radius: 12px;
+    width: 10rem;
+    height: 3rem;
+    z-index: 1;
+  }
+
+  .buttonBookmark div span{
+    display: block;
+    font-weight: 700;
+    color: hsl(176, 50%, 47%);
+  }
+
+  .buttonBookmark{
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+  }
+  .valuesGraphic{
+    flex-direction: row;
+    gap: 6rem;
+    margin-left: 3rem;
+    margin:0;
+    height: 10rem;
+    /* padding:0; */
+  }
+  .box-first{
+    margin-top: 0;
+  }
+
+
+  .box-content .values  span{
+    border-bottom: none;
+  }
+
+  .values {
+    /* border: 1px solid blue; */
+    /* width: 15rem; */
+    /* align-items: center; */
+  }
+
+  .line-progress{
+    position:absolute;
+    top: 8rem;
+  }
+
 }
 
