@@ -249,7 +249,7 @@ main{
   text-align: left;
 }
 
-.card-price h2 span{
+.card-price .card-name  span{
   display: block;
   color: rgba(138,138,138, 1);
   font-weight: 700;
@@ -475,9 +475,11 @@ header::after{
     background-position-y: -20%;
     display: flex;
     justify-content: center;
+    position:relative;
+    top: -1rem;
   }
   body{
-    background: blue;
+    background: #eee;
   }
   main {
     display: flex;
@@ -572,7 +574,10 @@ header::after{
     gap: 6rem;
     margin-left: 3rem;
     margin:0;
-    height: 10rem;
+    height: 12rem;
+    padding-top: 2.5rem;
+    /* padding-bottom: 3rem; */
+
     /* padding:0; */
   }
   .box-first{
@@ -584,15 +589,45 @@ header::after{
     border-bottom: none;
   }
 
-  .values {
-    /* border: 1px solid blue; */
-    /* width: 15rem; */
-    /* align-items: center; */
+  .values::after {
+    content: '';
+    position: relative;
+    left: 13rem;
+    top:-5rem;
+    display: block;
+    width: 1px;
+    height: 3rem;
+    background: rgba(219,219,219, 1);
+  }
+
+  .valueLast::after{
+    background: transparent;
   }
 
   .line-progress{
     position:absolute;
-    top: 8rem;
+    top: 9rem;
+  }
+
+  .box-content .about-title{
+    font-size: 1.5rem;
+    padding-top: 1.4rem;
+  }
+  .card-name{
+    width: 98%;
+  }
+  .card-name  span{
+    display: block;
+    font-size: 1rem;
+    color:hsl(176, 50%, 47%);
+  }
+  .card-name h2{
+    font-size: 1.25rem;
+  }
+  .card-name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
 }
