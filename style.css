@@ -248,7 +248,12 @@ main{
   padding: 0;
   text-align: left;
 }
-
+.btns-board{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
 .card-price .card-name  span{
   display: block;
   color: rgba(138,138,138, 1);
@@ -465,6 +470,9 @@ header::after{
 .buttonBookmark span {
   display: none;
 }
+.lefts-inside-desktop{
+  display: none;
+}
 @media only screen and (min-width: 768px) {
 
   header{
@@ -628,6 +636,60 @@ header::after{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .btns-board {
+    margin-top: 1rem;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .sucess-modal{
+    width: 25rem;
+    height: 25rem;
+  }
+  .sucess-modal p, .sucess-modal button{
+    padding: 1rem;
+  }
+  
+  .selection-modal{
+    width: 40rem;
+  }
+
+  .selection-modal h2:hover{
+    color: hsl(176, 50%, 47%);
+  }
+
+  /* .selection-card{
+   height: 18rem;
+  } */
+
+
+  .selection-card p {
+    padding: 1.5rem;
+  } 
+
+  .lefts-inside-desktop{
+    display: block;
+    padding-left: 5rem;
+  }
+
+  .selection-prices-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width:  100%;
+    gap: 1rem;
+  }
+  .left-mobile{
+    display:none;
+  }
+  .finish-select{
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    gap:4rem;
+    margin-bottom: -1rem;
   }
 
 }
