@@ -27,7 +27,6 @@ body{
   font-size: 1rem;
   font-family:'Commissioner', sans-serif; 
   background-color: var(--colorBackgroundMain);
-  /* background-color: black; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,9 +39,13 @@ li {
 h1{
   font-size: 1.8rem;
   font-weight: 700;
-  color: rgb(255,255,255);
+  color:  #eee;
   cursor: pointer;
 
+}
+
+.box-content h1 span{
+  display: block;
 }
 
 header{
@@ -71,8 +74,6 @@ nav img{
 #menu-mobile{
   display: none;
   position: absolute;
-  /* margin-left: 8em; */
-  /* margin-right: 20em; */
 }
 
 #closeMenuIcon{
@@ -88,23 +89,15 @@ nav img{
   top: 5rem;
   right: -10rem;
   background-color: rgb(255,255,255);
-  /* background-color: blue; */
   border-radius: 12px;
   padding-top: 1rem;
   z-index: 1;
-  /* border: 1px solid red; */
 } 
 #menu-mobile ul li {
-  /* margin-bottom:  1rem;   */
   border-bottom: 1px solid rgba(138,138,138, 0.3);
-  /* border:1px solid red; */
-  /* height: 1.5rem; */
-  /* margin: auto 0; */
   padding-bottom: 1rem;
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
-  /* justify-content: center; */
 }
 
 #menu-mobile ul li span {
@@ -123,7 +116,6 @@ main{
   position: relative;
   top: -5rem;
   width: 90vw;
-  /* height: 50vh; */
   background-color: var(--colorBoxs);
   border-radius: 14px;
 
@@ -158,7 +150,6 @@ main{
 .buttons{
   display: flex;
   width: 90%;
-  /* border: 1px solid red; */
   justify-content: space-between;
   margin-bottom: 1rem;
 }
@@ -232,7 +223,6 @@ main{
 
 .card-price{
   border: 2px solid rgba(138,138,138, 0.3);
-  /* border-bottom: none; */
   border-radius: 10px;
   display: flex;
   flex-direction:column;
@@ -316,8 +306,6 @@ aside{
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  /* width: 100%; */
-  /* background: #ffff00; */
   padding-top: 2.4rem;
   padding-left: 2rem;
   padding-right: 1rem;
@@ -367,8 +355,6 @@ aside{
   justify-content: center;
 }
 
-
-
 input[type="radio"]:checked::after{
   content: '';
   display:block;
@@ -378,17 +364,15 @@ input[type="radio"]:checked::after{
   background-color: hsl(176, 50%, 47%);
 }
 
-/* input[type="radio"]:checked ~ .card-price{
-  border: 10px solid red;
-} */
 .selection span {
   font-size: 0.8rem;
   font-weight: 500;
   color:rgba(138,138,138, 1);
 }
 
-.selection div{
+.selection .selection-prices-info{
   margin-left: 0.5rem;
+  width: 100%;
 }
 .selection-modal .selection h2{
   font-size: 1rem;
@@ -473,6 +457,10 @@ header::after{
 .lefts-inside-desktop{
   display: none;
 }
+
+.valuesGraphic h1{
+  display:none;
+}
 @media only screen and (min-width: 768px) {
 
   header{
@@ -500,6 +488,11 @@ header::after{
     margin-top: 3.5rem;
     width: 100rem;
     height: 10rem;
+
+  }
+
+  .box-content h1 span{
+    display: inline;
   }
 
   nav h1{
@@ -638,6 +631,11 @@ header::after{
     justify-content: space-between;
   }
 
+  .selection{
+    /* border:1px solid red; */
+    width: 1rem;
+    /* height: 10rem; */
+  }
   .btns-board {
     margin-top: 1rem;
     width: 100%;
@@ -672,14 +670,24 @@ header::after{
   .lefts-inside-desktop{
     display: block;
     padding-left: 5rem;
+    /* width: 40%; */
   }
 
   .selection-prices-info{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width:  100%;
+    /* width:  100rem; */
     gap: 1rem;
+    /* border: 1px solid red; */
+  }
+
+  .selection-prices-info h2{
+    /* font-size: 4.5rem; */
+  }
+
+  .selection-prices-info span {
+    width: 30%;
   }
   .left-mobile{
     display:none;
@@ -690,6 +698,10 @@ header::after{
     width: 100%;
     gap:4rem;
     margin-bottom: -1rem;
+  }
+
+  .about{
+    padding-bottom: 2rem;
   }
 
 }
